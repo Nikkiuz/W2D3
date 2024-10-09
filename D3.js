@@ -258,3 +258,6 @@ console.log(charactersNames.length)
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 
+Math.floor(starWarsCharacters[Math.random() * 10])
+
+
