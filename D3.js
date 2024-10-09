@@ -183,10 +183,13 @@ console.log(eyeColor)
 // console.log(starWarsCharacters.length) - 10
 
 let crewMass = 0;
+
 let counter = 0;
 
 while (counter < starWarsCharacters.length) {
+
     crewMass = crewMass + starWarsCharacters[counter].mass; 
+
     counter++;
 }
 
@@ -205,19 +208,19 @@ console.log(crewMass);
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
-if (totalMass < 500){
+if (crewMass < 500){
   console.log("Ship is under loaded")
 }
-else if (totalMass > 500 && totalMass < 700 ) {
+else if (crewMass > 500 && crewMass < 700 ) {
   console.log("Ship is half loaded")
 }
-else if (totalMass > 700 && totalMass < 900 ) {
+else if (crewMass > 700 && crewMass < 900 ) {
   console.log("Warning: Load is over 700")
 }
-else if (totalMass > 900 && totalMass < 1000 ) {
+else if (crewMass > 900 && crewMass < 1000 ) {
   console.log("Critical Load: Over 900")
 }
-else if (totalMass > 1000) {
+else if (crewMass > 1000) {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!")
 }
 
@@ -226,7 +229,9 @@ else if (totalMass > 1000) {
 */
 
 for (let i = 0 ; i < starWarsCharacters.length; i++) {
+
   if (starWarsCharacters[i].gender === 'n/a') {
+
     starWarsCharacters[i].gender = "robot"
   }
 }
@@ -238,6 +243,16 @@ for (let i = 0 ; i < starWarsCharacters.length; i++) {
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
+for(let i=0; i<femaleCharacters.length;i++) {
+  for(let j=0; j<charactersNames.length;j++) {
+    if(femaleCharacters[i].name === charactersNames[j]){
+      charactersNames.splice(j,1)
+    }
+  }
+  
+}
+
+console.log(charactersNames.length)
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
