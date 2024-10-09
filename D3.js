@@ -163,10 +163,13 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
           case 'red':
             eyeColor.red.push(starWarsCharacters[i])
             break
-          case 'blue-gray':
+            case 'blue-gray':
             eyeColor.blue_gray.push(starWarsCharacters[i])
-            break
-            
+              break
+
+              default:
+                console.log('il Pg di nome ' + starWarsCharacters.name + 'non ha un colore degli occhi definito')
+      
 
   }
 }
@@ -179,14 +182,14 @@ console.log(eyeColor)
 
 // console.log(starWarsCharacters.length) - 10
 
-let totalMass = 0;
+let crewMass = 0;
 let i = 0;
 
 while (i < 10) {
-    totalMass = totalMass + starWarsCharacters[i].mass; i++;
+    crewMass = crewMass + starWarsCharacters[i].mass; i++;
 }
 
-console.log(totalMass);
+console.log(crewMass);
 
 
 /* ESERCIZIO 7
